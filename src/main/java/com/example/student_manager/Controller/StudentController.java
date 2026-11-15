@@ -29,7 +29,7 @@ public class StudentController {
 
     @GetMapping("/")
     public String home(){
-        return "redirect:/student";
+        return "redirect:/students";
     }
 
     @GetMapping("/students")
@@ -50,7 +50,7 @@ public class StudentController {
         }
         service.save(student);
         redirect.addFlashAttribute("success","Student added successfully");
-        return "redirect/students";
+        return "redirect:/students";
         }
 
     @GetMapping("/students/{id}/edit")

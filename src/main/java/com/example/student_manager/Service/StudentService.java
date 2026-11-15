@@ -28,6 +28,6 @@ public class StudentService {
     public boolean emailExists(String email, Long excludedId){
         return excludedId==null
                 ?repository.existsByEmail(email)
-                :repository.existsByEmaliAndIdNot(email,excludedId);
+                :repository.existsByEmailAndIdNot(email,excludedId);
     }
 }
